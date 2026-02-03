@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aetheria | Sustainable Cloud Solutions</title>
     <style>
-        /* CSS Variables for easy color changes */
         :root {
             --primary-purple: #8a2be2;
             --dark-bg: #0f0f12;
@@ -68,9 +67,9 @@
             color: var(--primary-purple);
         }
 
-        /* Hero Section */
+        /* Hero / Landing Section */
         .hero {
-            height: 80vh;
+            height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -107,9 +106,9 @@
             background-color: #9d4edd;
         }
 
-        /* Content Sections */
+        /* About Section */
         section {
-            padding: 5rem 10%;
+            padding: 8rem 10%;
         }
 
         .section-title {
@@ -123,31 +122,18 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: center;
+            align-items: start;
         }
 
         .about-text h3 {
             margin-bottom: 1rem;
             font-size: 1.5rem;
+            color: var(--light-text);
         }
 
-        /* Cards/Features */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: #1a1a1f;
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid #333;
-            transition: border-color 0.3s;
-        }
-
-        .card:hover {
-            border-color: var(--primary-purple);
+        .about-text p {
+            color: var(--gray-text);
+            margin-bottom: 1.5rem;
         }
 
         footer {
@@ -157,6 +143,16 @@
             color: var(--gray-text);
             font-size: 0.9rem;
         }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -165,7 +161,6 @@
         <div class="logo">Aetheria</div>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#features">Technology</a></li>
             <li><a href="#about">About Us</a></li>
         </ul>
     </nav>
@@ -173,39 +168,21 @@
     <div id="home" class="hero">
         <h1>The Future is Atmospheric</h1>
         <p>Harnessing AI-driven cooling and 100% renewable energy to power the next generation of global web infrastructure.</p>
-        <a href="#about" class="btn">Explore Our Mission</a>
+        <a href="#about" class="btn">Learn More About Us</a>
     </div>
-
-    <section id="features">
-        <h2 class="section-title">Our Innovation</h2>
-        <div class="features">
-            <div class="card">
-                <h3>Zero-Emission</h3>
-                <p>Our data centers operate entirely on solar and wind energy, ensuring your data doesn't cost the Earth.</p>
-            </div>
-            <div class="card">
-                <h3>Neural Routing</h3>
-                <p>Advanced AI algorithms that route traffic through the most efficient nodes in real-time.</p>
-            </div>
-            <div class="card">
-                <h3>Global Scale</h3>
-                <p>Deploy applications to 50+ regions instantly with a single click and sub-millisecond latency.</p>
-            </div>
-        </div>
-    </section>
 
     <section id="about" style="background-color: #16161a;">
         <h2 class="section-title">About Aetheria</h2>
         <div class="about-container">
             <div class="about-text">
-                <h3>Who We Are</h3>
+                <h3>Our Origin</h3>
                 <p>Founded in 2026, Aetheria was born out of a simple realization: the internet is the backbone of modern life, but its energy consumption is unsustainable.</p>
-                <br>
-                <p>We are a team of software developers and environmental scientists dedicated to building a cleaner, faster, and more secure cloud. By combining cutting-edge software with green hardware, we provide the tools developers need to scale without the environmental guilt.</p>
+                <p>We are a team of software developers and environmental scientists dedicated to building a cleaner, faster, and more secure cloud infrastructure. By combining cutting-edge software with green hardware, we provide the tools developers need to scale without the environmental guilt.</p>
             </div>
             <div class="about-text">
                 <h3>Our Vision</h3>
                 <p>We believe that technology should empower humanity without depleting our natural resources. Our goal is to offset 1 gigaton of carbon emissions by 2030 through efficient computing practices.</p>
+                <p>At Aetheria, we don't just host your data; we protect the future of the planet one byte at a time.</p>
             </div>
         </div>
     </section>
