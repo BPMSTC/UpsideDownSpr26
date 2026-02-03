@@ -10,6 +10,8 @@
             --dark-bg: #0f0f12;
             --light-text: #f4f4f9;
             --gray-text: #a0a0aa;
+            /* Overlay color to ensure text readability over the image */
+            --img-overlay: rgba(15, 15, 18, 0.7); 
         }
 
         * {
@@ -67,7 +69,7 @@
             color: var(--primary-purple);
         }
 
-        /* Hero / Landing Section */
+        /* Hero / Landing Section with Background Image */
         .hero {
             height: 90vh;
             display: flex;
@@ -76,19 +78,26 @@
             align-items: center;
             text-align: center;
             padding: 0 10%;
-            background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f12 100%);
+            /* Using a high-res tech/nature hybrid image */
+            background: linear-gradient(var(--img-overlay), var(--img-overlay)), 
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Creates a slight parallax effect */
         }
 
         .hero h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
         }
 
         .hero p {
             font-size: 1.2rem;
-            color: var(--gray-text);
+            color: var(--light-text);
             max-width: 600px;
             margin-bottom: 2rem;
+            text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
         }
 
         .btn {
@@ -99,6 +108,7 @@
             border-radius: 5px;
             font-weight: bold;
             transition: transform 0.2s, background 0.3s;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
         }
 
         .btn:hover {
@@ -126,14 +136,15 @@
         }
 
         .about-text h3 {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
             color: var(--light-text);
         }
 
         .about-text p {
             color: var(--gray-text);
             margin-bottom: 1.5rem;
+            font-size: 1.1rem;
         }
 
         footer {
@@ -144,13 +155,16 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive design for smaller screens */
+        /* Mobile Optimization */
         @media (max-width: 768px) {
             .about-container {
                 grid-template-columns: 1fr;
             }
             .hero h1 {
                 font-size: 2.5rem;
+            }
+            .hero {
+                background-attachment: scroll;
             }
         }
     </style>
@@ -168,16 +182,16 @@
     <div id="home" class="hero">
         <h1>The Future is Atmospheric</h1>
         <p>Harnessing AI-driven cooling and 100% renewable energy to power the next generation of global web infrastructure.</p>
-        <a href="#about" class="btn">Learn More About Us</a>
+        <a href="#about" class="btn">Explore Our Story</a>
     </div>
 
     <section id="about" style="background-color: #16161a;">
         <h2 class="section-title">About Aetheria</h2>
         <div class="about-container">
             <div class="about-text">
-                <h3>Our Origin</h3>
+                <h3>Our Mission</h3>
                 <p>Founded in 2026, Aetheria was born out of a simple realization: the internet is the backbone of modern life, but its energy consumption is unsustainable.</p>
-                <p>We are a team of software developers and environmental scientists dedicated to building a cleaner, faster, and more secure cloud infrastructure. By combining cutting-edge software with green hardware, we provide the tools developers need to scale without the environmental guilt.</p>
+                <p>We are a team of software developers and environmental scientists dedicated to building a cleaner, faster, and more secure cloud infrastructure. We bridge the gap between high-performance computing and environmental responsibility.</p>
             </div>
             <div class="about-text">
                 <h3>Our Vision</h3>
