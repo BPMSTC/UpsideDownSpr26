@@ -1,0 +1,5 @@
+# Ignore documents folder
+documents/
+
+# Ignore brent.txt
+brent.txt
